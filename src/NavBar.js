@@ -1,22 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap";
 
 const NavBar = () => (
-  <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
     <div className="container-fluid">
-      <Link to="/">WebRef</Link>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/articles-list">Articles</Link>
+      <Link className="navbar-brand" to="/">
+        WebRef
+      </Link>
+      <ul className="navbar-nav me-2 mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/about">
+            About
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/articles-list">
+            Articles
+          </Link>
+        </li>
+      </ul>
       <button
-        className="navbar-toggler"
+        class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#responsiveNav"
-        aria-controls="basic-navbar-nav"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
     </div>
   </nav>
