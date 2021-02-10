@@ -29,16 +29,19 @@ const ArticlePage = ({ match }) => {
 
   return (
     <>
-      <h1>{article.title}</h1>
+      <h1 className="bg-white p-3">{article.title}</h1>
       <UpvotesSection
         articleName={name}
         upvotes={articleInfo.upvotes}
         setArticleInfo={setArticleInfo}
       />
-      {article.content.map((paragraph, key) => (
-        <p key={key}>{paragraph}</p>
-      ))}
+      <div className="container-md bg-white mt-3 mb-3 p-3">
+        {article.content.map((paragraph, key) => (
+          <p key={key}>{paragraph}</p>
+        ))}
+      </div>
       <CommentsList comments={articleInfo.comments} />
+
       <AddCommentForm articleName={name} setArticleInfo={setArticleInfo} />
       <h3>Other Articles:</h3>
       <ArticlesList articles={otherArticles} />
