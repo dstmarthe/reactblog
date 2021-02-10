@@ -29,6 +29,7 @@ const AddCommentForm = ({ articleName, setArticleInfo }) => {
           onChange={(event) => setUsername(event.target.value)}
         />
       </label>
+      <br />
       <label>
         Comment:
         <textarea
@@ -38,7 +39,13 @@ const AddCommentForm = ({ articleName, setArticleInfo }) => {
           onChange={(event) => setCommentText(event.target.value)}
         />
       </label>
-      <button onClick={() => addComment()}>Add Comment</button>
+      <br />
+      <button
+        className="btn btn-outline-secondary"
+        onClick={() => addComment()}
+      >
+        Add Comment
+      </button>
     </div>
   );
 };
