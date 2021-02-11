@@ -29,7 +29,11 @@ const ArticlePage = ({ match }) => {
 
   return (
     <>
-      <h1 className="bg-white p-3">{article.title}</h1>
+      <h1 className="font-monospace my-4">
+        <a href={article.link} className="text-reset" title="Visit Page">
+          {article.title}
+        </a>
+      </h1>
       <UpvotesSection
         articleName={name}
         upvotes={articleInfo.upvotes}
