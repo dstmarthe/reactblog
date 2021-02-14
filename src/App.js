@@ -12,7 +12,7 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/reactblog">
         <div className="App">
           <NavBar />
           <div id="page-body">
